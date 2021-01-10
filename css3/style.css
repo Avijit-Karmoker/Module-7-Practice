@@ -1,0 +1,229 @@
+/*        box       */
+
+.box {
+    width: 300px;
+    height: 200px;
+    border: 2px solid #e9b0df;
+    overflow: scroll;
+}
+
+.box2 {
+    width: 300px;
+    height: 150px;
+    border: 2px solid #cfdac8;
+    overflow: scroll;
+}
+
+.images .logo {
+    width: 100px;
+    height: 100px;
+}
+
+/*    transform    */
+
+.boxs{
+    width: 100px;
+    height: 100px;
+    border: 1px solid #374045;
+    background-color: chocolate;
+
+}
+
+.inner{
+    height: 100px;
+    width: 100px;
+    background-color: darkgray;
+    transform: scale(.5) rotate(45deg);
+}
+
+/**********  transition ***********/
+
+.transition-box{
+    width: 200px;
+    height: 200px;
+    border: 5px solid #ef4f4f;
+    background-color: dimgray;
+    transition-property: background-color;
+    transition-duration: 3s;
+    transition-timing-function: ease-in;
+/*    transition: background-color 1s ease-in;    */
+}
+
+.transition-box:hover{
+    background-color: cornflowerblue;
+}
+
+/********** transition & transform **********/
+
+.bat{
+   transition: transform .3s  ease-in-out;
+}
+
+.bat:hover{
+    transform: rotate(-60deg);
+    transform-origin: 100% 0%;
+}
+
+.ball{
+    height: 60px;
+    width: 60px;
+    border-radius: 50px;
+    background-color: red;
+    position: relative;
+    left: 640px;
+    transition: transform 3s ease-in-out .3s;
+}
+
+.field:hover .ball{
+    transform: translate(900px, -300px)
+}
+
+/*********   Animation    *******/
+
+.stage{
+    background-color: beige;
+    height: 200px;
+    min-width: 800px;
+}
+
+.ball1{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    background-color: crimson;
+    position: relative;
+}
+
+@keyframes bounce {
+    0% {
+        left: 0;
+        top: 0;
+    }
+    50% {
+        left: 400px;
+        top: 100px;
+    }
+    100% {
+        left: 800px;
+        top: 0;
+    }
+}
+
+.stage:hover .ball1{
+    animation: bounce 3s ease-in-out 2s infinite alternate;
+}
+
+/********    felbox     ********/
+
+.box4{
+    width: 400px;
+    height: 200px;
+    font-size: 30px;
+    border: 2px solid #e9b0df;
+    border-radius: 15px;
+}
+
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+/*        grid layout         */
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3, 120px);
+    grid-gap: 20px;
+}
+
+.box5{
+    height: 100px;
+    width: 100px;
+    border: 3px solid #008891;
+    padding: 10px;
+}
+
+/*    calender     */
+
+.calender ul{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 20px;
+}
+
+
+.calender li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    font-size: 3em;
+    height: 5em;
+    background-color: #00917c;
+}
+
+.other-month{
+    background-color: azure !important;
+}
+
+/*    media query     */
+
+.container1{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.food{
+    border: 3px solid #ff7b54;
+    border-radius: 40px;
+    margin: 10px;
+    width: 350px;
+}
+
+.food img{
+    width: 100%;
+    position: relative;
+}
+
+@media (max-width: 760px){
+    .container1 .food{
+        background-color: #ffba93;
+    }
+}
+
+@media (min-width: 1200px){
+    .container1 .food{
+        background-color: #83a95c;
+    }
+}
+
+@media (max-width: 560px){
+    .container1{
+       flex-direction: column;
+    }
+    .container1 .food{
+        background-color: #ffba93;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
